@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+    api:
+        build:
+            context: ./backend
+        networks:
+            - net
+    
+    client:
+        build: 
+            context: ./frontend
+        environment:
+            - DANGEROUSLY_DISABLE_HOST_CHECK=true
+        networks:
+            - net
+
+    nginx:
+        restart: always
+        build:
+            context: ./nginx
+        ports:
+            - "8004:80"
+        networks:
+            - net
+
+networks:
+  net:

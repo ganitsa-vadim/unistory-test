@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('prepare environment'){
             steps {
-                echo ${BUILD_NUMBER}
+                echo "${BUILD_NUMBER}"
             }
         }
         stage('build'){

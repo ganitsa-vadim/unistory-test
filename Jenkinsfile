@@ -13,7 +13,8 @@ pipeline {
         }
         stage('build'){
             steps {
-                echo "Test"
+                sh "docker-compose build"
+                sh "docker image ls"
             }
         }
     }

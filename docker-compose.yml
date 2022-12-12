@@ -1,16 +1,22 @@
 version: "3.8"
 services:
     api:
+        restart: always
         build:
             context: ./backend
+        image: api:${IMAGE_TAG}
+        env_file:
+            - ./.env
         networks:
             - net
     
     client:
+        restart: always
         build: 
             context: ./frontend
-        environment:
-            - DANGEROUSLY_DISABLE_HOST_CHECK=true
+        image: client:${IMAGE_TAG}
+        env_file:
+            - ./.env
         networks:
             - net
 

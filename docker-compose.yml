@@ -7,6 +7,8 @@ services:
         image: api:${IMAGE_TAG}
         env_file:
             - ./.env
+        volumes:
+            - ./web-data:/web-data
         networks:
             - net
     

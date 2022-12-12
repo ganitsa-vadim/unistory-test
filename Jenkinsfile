@@ -17,5 +17,15 @@ pipeline {
                 sh "docker image ls"
             }
         }
+        stage('create dir for docker volume'){
+            steps {
+                sh "mkdir web-data"
+            }
+        }
+        stage('start-app'{
+            steps {
+                sh "docker-compose up"
+            }
+        })
     }
 }

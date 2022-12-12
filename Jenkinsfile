@@ -13,8 +13,9 @@ pipeline {
         }
         stage('build'){
             steps {
-                sh "docker-compose build"
-                sh "docker image ls"
+                sh "whoami"
+                // sh "docker-compose build"
+                // sh "docker image ls"
             }
         }
     }

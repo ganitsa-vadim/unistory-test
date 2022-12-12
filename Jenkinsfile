@@ -13,12 +13,8 @@ pipeline {
         }
         stage('build'){
             steps {
-                sh "echo teste"
-                sh "whoami"
-                sh "docker ps"
-                sh "echo test"
-                // sh "docker-compose build"
-                // sh "docker image ls"
+                sh "docker-compose build"
+                sh "docker image ls"
             }
         }
     }

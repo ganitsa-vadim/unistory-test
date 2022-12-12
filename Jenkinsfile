@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh "echo DANGEROUSLY_DISABLE_HOST_CHECK=true >> .env"
                 sh "echo IMAGE_TAG=${BUILD_NUMBER} >> .env"
-                sh "echo APP_PORT=4200 >> .env"
+                sh "echo APP_PORT=4201 >> .env"
                 sh "cat .env"
             }
         }

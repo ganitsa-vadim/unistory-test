@@ -14,6 +14,7 @@ pipeline {
         stage('build'){
             steps {
                 sh "docker ps"
+                sh "echo test"
                 // sh "docker-compose build"
                 // sh "docker image ls"
             }

@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('prepare environment'){
             steps {
-                echo "${BUILD_NUMBER}"
+                echo IMAGE_TAG="${BUILD_NUMBER}" > .env
             }
         }
         stage('build'){

@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // echo "IMAGE_TAG=${BUILD_NUMBER}" > .env
                 sh "echo IMAGE_TAG=${BUILD_NUMBER} >> build.sbt"
-                sh "cat ./.env"
+                sh "ls -la"
             }
         }
         stage('build'){

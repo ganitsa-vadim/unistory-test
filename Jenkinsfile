@@ -22,10 +22,10 @@ pipeline {
                 sh "mkdir web-data"
             }
         }
-        stage('start-app'{
+        stage('start-app'){
             steps {
                 sh "docker-compose up"
             }
-        })
+        }
     }
 }

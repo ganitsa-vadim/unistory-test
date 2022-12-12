@@ -13,6 +13,7 @@ pipeline {
         }
         stage('build'){
             steps {
+                sh "echo whoami"
                 sh "docker ps"
                 sh "echo test"
                 // sh "docker-compose build"
